@@ -278,7 +278,7 @@ if (cluster.isMaster) {
 # nginx 서버 로드 벨런싱
 
     - nginx 를 docker 앞단에 두어, nginx를 프록시 서버로 쓰는것이다. 요청마다 요청을 분산해서 처리한다.
-
+```
 nginx 파일 구조중에 conf/nginx.conf 파일에 다음처럼 수정한다.
 
 upstream nodejs_server {
@@ -295,3 +295,4 @@ location / {
             proxy_pass http://nodejs_server;
         }
     }
+```
